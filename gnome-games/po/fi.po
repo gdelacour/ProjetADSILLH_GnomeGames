@@ -1,0 +1,856 @@
+# Finnish translation for gnome-games.
+# Copyright (C) 2016 gnome-games's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-games package.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2016, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-games master\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"games&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-08-30 16:59+0000\n"
+"PO-Revision-Date: 2017-09-07 15:00+0300\n"
+"Last-Translator: Jir Grönroos <jiri.gronroos+l10n@iki.fi>\n"
+"Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.3\n"
+
+#: ../data/org.gnome.Games.appdata.xml.in.h:1
+#: ../data/org.gnome.Games.desktop.in.h:1
+#: ../data/ui/collection-header-bar.ui.h:1 ../data/ui/display-header-bar.ui.h:1
+#: ../src/ui/application.vala:20
+msgid "Games"
+msgstr "Pelit"
+
+#: ../data/org.gnome.Games.appdata.xml.in.h:2
+msgid "Simple game launcher for GNOME"
+msgstr "Yksinkertainen pelikäynnistin Gnomelle"
+
+#: ../data/org.gnome.Games.appdata.xml.in.h:3
+msgid ""
+"Games is a GNOME 3 application to browse your video games library and to "
+"easily pick and play a game from it. It aims to do for games what Music "
+"already does for your music library."
+msgstr ""
+"Pelit on Gnome 3 -sovellus, jolla on mahdollista selata omaa "
+"videopelikokoelmaa ja valita sieltä pelattava peli. Sen tavoite on sama, "
+"mihin Gnomen musiikkisovellus tähtää musiikkikirjaston suhteen."
+
+#: ../data/org.gnome.Games.appdata.xml.in.h:4
+msgid ""
+"You want to install Games if you just want a very simple and comfortable way "
+"to play your games and you don’t need advanced features such as speedrunning "
+"tools or video game development tools."
+msgstr ""
+"Tämän sovelluksen avulla pääset nauttimaan peleistäsi vaivatta, mutta "
+"toisaalta se ei tarjoa edistyneitä ominaisuuksia kuten speedrunning-"
+"työkaluja tai pelikehitykseen tarvittavia työkaluja."
+
+#: ../data/org.gnome.Games.appdata.xml.in.h:5
+msgid "Features:"
+msgstr "Ominaisuudet:"
+
+#: ../data/org.gnome.Games.appdata.xml.in.h:6
+msgid "List your installed games, your Steam games, your game ROMs…"
+msgstr "Luetteloi asennetut pelit, Steam-pelit, peli-ROM:it…"
+
+#: ../data/org.gnome.Games.appdata.xml.in.h:7
+msgid "Search in your games collection"
+msgstr "Etsi pelikokoelmastasi"
+
+#: ../data/org.gnome.Games.appdata.xml.in.h:8
+msgid "Play your games"
+msgstr "Pelaa pelejäsi"
+
+#: ../data/org.gnome.Games.appdata.xml.in.h:9
+msgid "Resume your game to where you left it"
+msgstr "Jatka peliä siitä, mihin jäit"
+
+#: ../data/org.gnome.Games.desktop.in.h:2
+msgid "Video game player"
+msgstr "Videopelitoistin"
+
+#: ../data/org.gnome.Games.desktop.in.h:3
+msgid "View and play your video games collection"
+msgstr "Selaa ja pelaa videopelejäsi"
+
+#: ../data/org.gnome.Games.desktop.in.h:4
+msgid "game;videogame;video game;player;"
+msgstr "game;videogame;video game;player;peli;"
+
+#: ../data/org.gnome.Games.gschema.xml.h:1 ../data/ui/display-header-bar.ui.h:3
+msgid "Fullscreen"
+msgstr "Koko näyttö"
+
+#: ../data/org.gnome.Games.gschema.xml.h:2
+msgid "Whether the games should be displayed in full screen or not."
+msgstr "Esitetäänkö pelit koko näytön tilassa vai ei."
+
+#: ../data/org.gnome.Games.gschema.xml.h:3
+msgid "Video filter"
+msgstr "Videosuodatin"
+
+#: ../data/org.gnome.Games.gschema.xml.h:4
+msgid ""
+"Filter for the game video output. Allowed values are: “smooth” (blurry "
+"pixels), “sharp” (blocky pixels)."
+msgstr ""
+
+#: ../data/org.gnome.Games.gschema.xml.h:5
+msgid "Window maximized"
+msgstr "Ikkuna suurennettu"
+
+#: ../data/org.gnome.Games.gschema.xml.h:6
+msgid "Window maximized state."
+msgstr ""
+
+#: ../data/org.gnome.Games.gschema.xml.h:7
+msgid "Window size"
+msgstr "Ikkunan koko"
+
+#: ../data/org.gnome.Games.gschema.xml.h:8
+msgid "Window size (width and height)."
+msgstr "Ikkunan koko (leveys ja korkeus)."
+
+#: ../data/gtk/menus.ui.h:1
+msgid "_Preferences"
+msgstr "_Asetukset"
+
+#: ../data/gtk/menus.ui.h:2
+msgid "_About"
+msgstr "_Tietoja"
+
+#: ../data/gtk/menus.ui.h:3
+msgid "_Quit"
+msgstr "_Lopeta"
+
+#: ../data/ui/collection-box.ui.h:1
+msgid "Loading"
+msgstr "Ladataan"
+
+#: ../data/ui/collection-header-bar.ui.h:2
+msgid "Add game files…"
+msgstr "Lisää pelitiedostoja…"
+
+#: ../data/ui/collection-header-bar.ui.h:3
+msgid "Search"
+msgstr "Etsi"
+
+#: ../data/ui/display-header-bar.ui.h:2 ../data/ui/gamepad-configurer.ui.h:3
+msgid "Back"
+msgstr "Takaisin"
+
+#: ../data/ui/display-header-bar.ui.h:4
+msgid "Restore"
+msgstr "Palauta"
+
+#: ../data/ui/dummy-display.ui.h:1
+msgid "This is a dummy game display"
+msgstr ""
+
+#: ../data/ui/dummy-display.ui.h:2
+msgid "If you see this, this is a bug."
+msgstr "Jos näet tämän, kyseessä on bugi."
+
+#: ../data/ui/dummy-display.ui.h:3
+msgid "Please contact the developers."
+msgstr "Ota yhteys kehittäjiin."
+
+#: ../data/ui/empty-collection.ui.h:1
+msgid "No games found"
+msgstr "Pelejä ei löytynyt"
+
+#: ../data/ui/empty-collection.ui.h:2
+msgid ""
+"Install games or add directories containing games to your search sources."
+msgstr "Asenna pelejä tai lisää pelejä sisältäviä kansioita hakulähteisiin."
+
+#: ../data/ui/gamepad-configurer.ui.h:1
+#: ../data/ui/reset-gamepad-mapping-dialog.ui.h:4
+#: ../data/ui/resume-failed-dialog.ui.h:3
+msgid "Reset"
+msgstr ""
+
+#: ../data/ui/gamepad-configurer.ui.h:2
+msgid "Configure"
+msgstr "Määritä"
+
+#: ../data/ui/gamepad-configurer.ui.h:4 ../data/ui/quit-dialog.ui.h:3
+#: ../data/ui/reset-gamepad-mapping-dialog.ui.h:3
+#: ../data/ui/resume-failed-dialog.ui.h:2
+msgid "Cancel"
+msgstr "Peru"
+
+#: ../data/ui/gamepad-mapper.ui.h:1
+msgid "Skip"
+msgstr "Ohita"
+
+#: ../data/ui/media-menu-button.ui.h:1
+msgid "Media"
+msgstr "Media"
+
+#: ../data/ui/preferences-page-controllers.ui.h:1
+msgid "Gamepads"
+msgstr "Peliohjaimet"
+
+#: ../data/ui/preferences-page-controllers.ui.h:2
+#: ../data/ui/preferences-window.ui.h:3
+msgid "Controllers"
+msgstr "Ohjaimet"
+
+#: ../data/ui/preferences-page-plugins.ui.h:1
+msgid "Plugins"
+msgstr "Liitännäiset"
+
+#: ../data/ui/preferences-page-plugins.ui.h:2
+#: ../data/ui/preferences-window.ui.h:4
+msgid "Extensions"
+msgstr "Laajennukset"
+
+#: ../data/ui/preferences-page-video.ui.h:1
+msgid "Filter"
+msgstr "Suodatin"
+
+#: ../data/ui/preferences-page-video.ui.h:2
+#: ../data/ui/preferences-window.ui.h:2
+msgid "Video"
+msgstr "Video"
+
+#: ../data/ui/preferences-window.ui.h:1
+msgid "Preferences"
+msgstr "Asetukset"
+
+#: ../data/ui/quit-dialog.ui.h:1
+msgid "Are you sure you want to quit?"
+msgstr "Haluatko varmasti lopettaa?"
+
+#: ../data/ui/quit-dialog.ui.h:2
+msgid "All unsaved progress will be lost."
+msgstr "Kaikki tallentamattomat tiedot katoavat."
+
+#: ../data/ui/quit-dialog.ui.h:4
+msgid "Quit"
+msgstr "Lopeta"
+
+#: ../data/ui/remote-display.ui.h:1
+msgid "Use the game’s own window to play it"
+msgstr "Käytä pelin omaa ikkunaa pelaamiseen"
+
+#: ../data/ui/remote-display.ui.h:2
+msgid "This game isn’t integrated to GNOME Games."
+msgstr "Tätä peliä ei ole integroitu Gnomen peleihin."
+
+#: ../data/ui/remote-display.ui.h:3
+msgid "You have to use its own window to play it."
+msgstr "Käytä pelin omaa ikkunaa pelaamiseen."
+
+#: ../data/ui/reset-gamepad-mapping-dialog.ui.h:1
+msgid "Factory reset mapping for this gamepad?"
+msgstr ""
+
+#: ../data/ui/reset-gamepad-mapping-dialog.ui.h:2
+#, fuzzy
+#| msgid "All unsaved progress will be lost."
+msgid "Your mapping will be lost."
+msgstr "Kaikki tallentamattomat tiedot katoavat."
+
+#: ../data/ui/resume-dialog.ui.h:1
+msgid "Resume last game?"
+msgstr "Jatketaanko viimeisintä peliä?"
+
+#: ../data/ui/resume-dialog.ui.h:2
+msgid "Restart"
+msgstr "Aloita uudelleen"
+
+#: ../data/ui/resume-dialog.ui.h:3
+msgid "Resume"
+msgstr "Jatka"
+
+#: ../data/ui/resume-failed-dialog.ui.h:1
+msgid "Resuming failed. Do you want to restart the game?"
+msgstr "Palauttaminen epäonnistui. Haluatko käynnistää pelin uudelleen?"
+
+#: ../plugins/desktop/src/desktop-plugin.vala:48
+#, c-format
+msgid "Invalid command “%s”."
+msgstr "Virheellinen komento “%s”."
+
+#: ../plugins/desktop/src/desktop-plugin.vala:58
+#, c-format
+msgid "Tracker listed file not found: “%s”."
+msgstr "Tracker-listattua tiedostoa ei löydy: “%s”."
+
+#: ../plugins/desktop/src/desktop-plugin.vala:64
+#, c-format
+msgid "Couldn’t parse desktop entry “%s”."
+msgstr ""
+
+#: ../plugins/desktop/src/desktop-plugin.vala:74
+#, fuzzy, c-format
+#| msgid "File “%s” doesn’t exist."
+msgid "“%s” shouldn’t be displayed."
+msgstr "Tiedostoa “%s” ei ole olemassa."
+
+#: ../plugins/desktop/src/desktop-plugin.vala:77
+#, c-format
+msgid "“%s” is hidden."
+msgstr "“%s” on piilotettu."
+
+#: ../plugins/desktop/src/desktop-plugin.vala:86
+#, fuzzy, c-format
+#| msgid "'%s' has blacklisted executable '%s'."
+msgid "“%s” has blacklisted category “%s”."
+msgstr "'%s' sisältää mustalle listalle lisätyn suoritettavan tiedoston '%s'."
+
+#: ../plugins/desktop/src/desktop-plugin.vala:95
+#, c-format
+msgid "“%s” has blacklisted executable “%s”."
+msgstr "“%s” on asettanut mustalle listalle suoritettavan tiedoston “%s”."
+
+#: ../plugins/desktop/src/desktop-plugin.vala:102
+#, c-format
+msgid "“%s” is blacklisted."
+msgstr "“%s” on mustalla listalla."
+
+#: ../plugins/dreamcast/src/dreamcast-header.vala:54
+msgid "The file doesn’t have a Dreamcast header."
+msgstr "Tiedostossa ei ole Dreamcast-otsaketta."
+
+#: ../plugins/game-cube/src/game-cube-header.vala:20
+msgid "The file doesn’t have a Game Cube header."
+msgstr "Tiedostossa ei ole GameCube-otsaketta."
+
+#: ../plugins/love/src/love-package.vala:13
+#: ../plugins/love/src/love-package.vala:17
+#, c-format
+msgid "This doesn’t represent a valid LÖVE package: “%s”."
+msgstr ""
+
+#: ../plugins/mame/src/mame-game-uri-adapter.vala:16
+#, c-format
+msgid "Invalid MAME game id “%s” for “%s”."
+msgstr ""
+
+#: ../plugins/playstation/src/playstation-header.vala:27
+#, c-format
+msgid "Not a PlayStation disc: “%s”."
+msgstr "Ei PlayStation-levy: “%s”."
+
+#: ../plugins/playstation/src/playstation-header.vala:37
+#, c-format
+msgid "Invalid PlayStation header: disc ID not found in “%s”."
+msgstr ""
+
+#: ../plugins/sega-cd/src/sega-cd-header.vala:44
+#: ../plugins/sega-cd/src/sega-cd-header.vala:63
+msgid "The file doesn’t have a Genesis/Sega 32X/Sega CD/Sega Pico header."
+msgstr "Tiedostossa ei ole Genesis/Sega 32X/Sega CD/Sega Pico -otsaketta."
+
+#: ../plugins/sega-cd/src/sega-cd-plugin.vala:78
+#: ../plugins/sega-saturn/src/sega-saturn-plugin.vala:62
+#, fuzzy, c-format
+#| msgid "The file doesn't have a Dreamcast header."
+msgid "The file “%s” doesn’t have a track."
+msgstr "Tiedostossa ei ole Dreamcast-otsaketta."
+
+#: ../plugins/sega-cd/src/sega-cd-plugin.vala:84
+#: ../plugins/sega-saturn/src/sega-saturn-plugin.vala:68
+#, fuzzy, c-format
+#| msgid "The file '%s' doesn't have a valid Sega Saturn binary file."
+msgid "The file “%s” doesn’t have a valid binary file format."
+msgstr "Tiedostossa '%s' ei ole kelvollista Sega Saturn -binääritiedostoa."
+
+#: ../plugins/sega-cd/src/sega-cd-plugin.vala:87
+#: ../plugins/sega-saturn/src/sega-saturn-plugin.vala:71
+#, fuzzy, c-format
+#| msgid "The file '%s' doesn't have a valid Sega Saturn binary file."
+msgid "The file “%s” doesn’t have a valid track mode for track %d."
+msgstr "Tiedostossa '%s' ei ole kelvollista Sega Saturn -binääritiedostoa."
+
+#: ../plugins/sega-saturn/src/sega-saturn-header.vala:54
+msgid "The file doesn’t have a Sega Saturn header."
+msgstr "Tiedostossa ei ole Sega Saturn -otsaketta."
+
+#: ../plugins/sega-saturn/src/sega-saturn-plugin.vala:75
+#, fuzzy, c-format
+#| msgid "The file '%s' doesn't have a valid Sega Saturn binary file."
+msgid "The file “%s” doesn’t have a valid Sega Saturn binary file."
+msgstr "Tiedostossa '%s' ei ole kelvollista Sega Saturn -binääritiedostoa."
+
+#: ../plugins/steam/src/steam-plugin.vala:45
+#, c-format
+msgid "Couldn’t get Steam appid from manifest “%s”."
+msgstr ""
+
+#: ../plugins/steam/src/steam-registry.vala:68
+#, c-format
+msgid "File “%s” doesn’t exist."
+msgstr "Tiedostoa “%s” ei ole olemassa."
+
+#: ../plugins/steam/src/steam-registry.vala:96
+msgid "Unexpected token '{'."
+msgstr ""
+
+#: ../plugins/steam/src/steam-registry.vala:110
+msgid "Unexpected end of tokens."
+msgstr ""
+
+#: ../plugins/steam/src/steam-registry.vala:113
+msgid "Unexpected token '}'."
+msgstr ""
+
+#: ../plugins/steam/src/steam-title.vala:17
+msgid "Couldn’t get name from Steam registry."
+msgstr ""
+
+#: ../plugins/wii/src/wii-header.vala:20
+#, c-format
+msgid "Invalid Wii header size: %s"
+msgstr "Virheellinen Wii-otsakkeen koko: %s"
+
+#: ../plugins/wii/src/wii-header.vala:33 ../plugins/wii/src/wii-header.vala:44
+msgid "The file doesn’t have a Wii header."
+msgstr "Tiedostossa ei ole Wii-otsaketta."
+
+#: ../plugins/wii/src/wii-header.vala:55
+#, c-format
+msgid "Couldn’t read file: %s"
+msgstr "Tiedoston lukeminen epäonnistui: %s"
+
+#: ../src/command/command-runner.vala:33
+msgid "The game doesn’t have a valid command."
+msgstr "Pelillä ei ole kelvollista komentoa."
+
+#: ../src/command/command-runner.vala:64
+#, c-format
+msgid "Couldn’t run “%s”: execution failed."
+msgstr "Kohteen “%s” käynnistäminen epäonnistui: suorittaminen epäonnistui."
+
+#: ../src/core/media-set/media-set.vala:30
+#, c-format
+msgid "Invalid media index %u."
+msgstr ""
+
+#: ../src/core/plugin-registrar.vala:27
+#, c-format
+msgid "Invalid plugin descriptor: %s"
+msgstr ""
+
+#: ../src/core/plugin-registrar.vala:48 ../src/core/plugin-registrar.vala:52
+#, c-format
+msgid "Couldn’t create a new instance of plugin in “%s”."
+msgstr ""
+
+#: ../src/gameinfo/gameinfo-disc-id-disc-title.vala:24
+#, c-format
+msgid "Disc %d"
+msgstr "Levy %d"
+
+#: ../src/gameinfo/gameinfo-doc.vala:15
+#, c-format
+msgid "No game title found for disc ID “%s”."
+msgstr ""
+
+#: ../src/gameinfo/gameinfo-doc.vala:31
+#, c-format
+msgid "No disc title found for disc ID “%s”."
+msgstr ""
+
+#: ../src/gameinfo/gameinfo-doc.vala:41
+#, c-format
+msgid "No disc set ID found for disc ID “%s”."
+msgstr ""
+
+#: ../src/gameinfo/gameinfo-doc.vala:49 ../src/gameinfo/gameinfo-doc.vala:59
+#, c-format
+msgid "No disc found for disc ID “%s”."
+msgstr ""
+
+#: ../src/gamepad/gamepad-mapping.c:236
+msgid "The mapping string can’t be null."
+msgstr ""
+
+#: ../src/gamepad/gamepad-mapping.c:245
+msgid "The mapping string can’t be empty."
+msgstr ""
+
+#: ../src/gamepad/linux/linux-raw-gamepad.c:291
+#, c-format
+msgid "Unable to open file “%s”: %s"
+msgstr "Tiedoston “%s” avaaminen ei onnistu: %s"
+
+#: ../src/gamepad/linux/linux-raw-gamepad.c:304
+#, fuzzy, c-format
+#| msgid "Oops! Unable to run “%s”"
+msgid "Evdev is unable to open “%s”: %s"
+msgstr "Hups! Pelin “%s” käynnistäminen ei onnistu"
+
+#: ../src/retro/retro-core-source.vala:25
+#: ../src/retro/retro-core-source.vala:37
+#, c-format
+msgid "No module found for platform “%s” and MIME types [ “%s” ]."
+msgstr ""
+
+#: ../src/retro/retro-core-source.vala:25
+#: ../src/retro/retro-core-source.vala:37
+msgid "”, “"
+msgstr "”, “"
+
+#: ../src/retro/retro-core-source.vala:76
+#, c-format
+msgid "This game requires the %s firmware file to run."
+msgstr ""
+
+#: ../src/retro/retro-core-source.vala:93
+#, c-format
+msgid ""
+"This game requires the %s firmware file with a MD5 fingerprint of %s to run."
+msgstr ""
+
+#: ../src/retro/retro-core-source.vala:99
+#, c-format
+msgid ""
+"This game requires the %s firmware file with a SHA-512 fingerprint of %s to "
+"run."
+msgstr ""
+
+#: ../src/retro/retro-platform.vala:7
+msgid "Amiga"
+msgstr "Amiga"
+
+#: ../src/retro/retro-platform.vala:9
+msgid "Atari 2600"
+msgstr "Atari 2600"
+
+#: ../src/retro/retro-platform.vala:11
+msgid "Atari 5200"
+msgstr "Atari 5200"
+
+#: ../src/retro/retro-platform.vala:13
+msgid "Atari 7800"
+msgstr "Atari 7800"
+
+#: ../src/retro/retro-platform.vala:15
+msgid "Atari Lynx"
+msgstr "Atari Lynx"
+
+#: ../src/retro/retro-platform.vala:17
+msgid "DOOM"
+msgstr "DOOM"
+
+#: ../src/retro/retro-platform.vala:19
+msgid "Dreamcast"
+msgstr "Dreamcast"
+
+#. translators: only released in eastern Asia
+#: ../src/retro/retro-platform.vala:22
+msgid "Famicom Disk System"
+msgstr "Famicom Disk System"
+
+#: ../src/retro/retro-platform.vala:24
+msgid "Game Boy"
+msgstr "Game Boy"
+
+#: ../src/retro/retro-platform.vala:26
+msgid "Game Boy Color"
+msgstr "Game Boy Color"
+
+#: ../src/retro/retro-platform.vala:28
+msgid "Game Boy Advance"
+msgstr "Game Boy Advance"
+
+#: ../src/retro/retro-platform.vala:30
+msgid "Nintendo GameCube"
+msgstr "Nintendo GameCube"
+
+#: ../src/retro/retro-platform.vala:32
+msgid "Game Gear"
+msgstr "Game Gear"
+
+#. translators: the "Multiple Arcade Machine Emulator"
+#: ../src/retro/retro-platform.vala:35
+msgid "MAME"
+msgstr "MAME"
+
+#: ../src/retro/retro-platform.vala:37
+msgid "MS-DOS"
+msgstr "MS-DOS"
+
+#: ../src/retro/retro-platform.vala:39
+msgid "Neo Geo Pocket"
+msgstr "Neo Geo Pocket"
+
+#. translators: known as "Famicom" in eastern Asia
+#: ../src/retro/retro-platform.vala:42
+msgid "Nintendo Entertainment System"
+msgstr "Nintendo Entertainment System"
+
+#: ../src/retro/retro-platform.vala:44
+msgid "Nintendo 64"
+msgstr "Nintendo 64"
+
+#: ../src/retro/retro-platform.vala:46
+msgid "Nintendo DS"
+msgstr "Nintendo DS"
+
+#: ../src/retro/retro-platform.vala:48
+msgid "Nintendo 3DS"
+msgstr "Nintendo 3DS"
+
+#: ../src/retro/retro-platform.vala:50
+msgid "PlayStation"
+msgstr "PlayStation"
+
+#: ../src/retro/retro-platform.vala:52
+msgid "PlayStation 2"
+msgstr "PlayStation 2"
+
+#: ../src/retro/retro-platform.vala:54
+msgid "PlayStation 3"
+msgstr "PlayStation 3"
+
+#: ../src/retro/retro-platform.vala:56
+msgid "PlayStation 4"
+msgstr "PlayStation 4"
+
+#: ../src/retro/retro-platform.vala:58
+msgid "PlayStation Portable"
+msgstr "PlayStation Portable"
+
+#: ../src/retro/retro-platform.vala:60
+msgid "PlayStation Vita"
+msgstr "PlayStation Vita"
+
+#. translators: known as "Mega Drive 32X", "Mega 32X" or "Super 32X" in other places
+#: ../src/retro/retro-platform.vala:63
+msgid "Genesis 32X"
+msgstr "Genesis 32X"
+
+#. translators: known as "Mega-CD" in most of the world
+#: ../src/retro/retro-platform.vala:66
+msgid "Sega CD"
+msgstr "Sega CD"
+
+#. translators: known as "Mega-CD 32X" in most of the world
+#: ../src/retro/retro-platform.vala:69
+msgid "Sega CD 32X"
+msgstr "Sega CD 32X"
+
+#. translators: known as "Mega Drive" in most of the world
+#: ../src/retro/retro-platform.vala:72
+msgid "Sega Genesis"
+msgstr "Sega Genesis"
+
+#. translators: also known as "Sega Mark III" in eastern asia
+#: ../src/retro/retro-platform.vala:75
+msgid "Sega Master System"
+msgstr "Sega Master System"
+
+#: ../src/retro/retro-platform.vala:77
+msgid "Sega Pico"
+msgstr "Sega Pico"
+
+#: ../src/retro/retro-platform.vala:79
+msgid "Sega Saturn"
+msgstr "Sega Saturn"
+
+#: ../src/retro/retro-platform.vala:81
+msgid "SG-1000"
+msgstr "SG-1000"
+
+#. translators: known as "Super Famicom" in eastern Asia
+#: ../src/retro/retro-platform.vala:84
+msgid "Super Nintendo Entertainment System"
+msgstr "Super Nintendo Entertainment System"
+
+#. translators: known as "PC Engine" in eastern Asia and France
+#: ../src/retro/retro-platform.vala:87
+msgid "TurboGrafx-16"
+msgstr "TurboGrafx-16"
+
+#. translators: known as "CD-ROM²" in eastern Asia and France
+#: ../src/retro/retro-platform.vala:90
+msgid "TurboGrafx-CD"
+msgstr "TurboGrafx-CD"
+
+#: ../src/retro/retro-platform.vala:92
+msgid "Wii"
+msgstr "Wii"
+
+#: ../src/retro/retro-platform.vala:94
+msgid "Wii U"
+msgstr "Wii U"
+
+#: ../src/retro/retro-platform.vala:96
+msgid "WiiWare"
+msgstr "WiiWare"
+
+#: ../src/retro/retro-platform.vala:98
+msgid "WonderSwan"
+msgstr "WonderSwan"
+
+#: ../src/retro/retro-platform.vala:100
+msgid "WonderSwan Color"
+msgstr "WonderSwan Color"
+
+#: ../src/retro/retro-runner.vala:246
+#, c-format
+msgid "No module found for “%s”."
+msgstr ""
+
+#: ../src/retro/retro-runner.vala:577
+#, c-format
+msgid "The system “%s” isn’t supported yet, but full support is planned."
+msgstr ""
+"Järjestelmä “%s” ei ole vielä tuettu, mutta täysi tuki on suunnitelmissa."
+
+#: ../src/retro/retro-runner.vala:580
+msgid "The system isn’t supported yet, but full support is planned."
+msgstr "Järjestelmä ei ole vielä tuettu, mutta täysi tuki on suunnitelmissa."
+
+#: ../src/ui/application.vala:136
+msgid "Select game files"
+msgstr "Valitse pelitiedostot"
+
+#: ../src/ui/application.vala:137
+msgid "_Cancel"
+msgstr "_Peru"
+
+#: ../src/ui/application.vala:138
+msgid "_Add"
+msgstr "_Lisää"
+
+#: ../src/ui/application.vala:313
+msgid "GNOME Games"
+msgstr "Gnomen pelit"
+
+#: ../src/ui/application.vala:315
+msgid "A video game player for GNOME"
+msgstr "Videopelitoistin Gnomelle"
+
+#: ../src/ui/application.vala:319
+msgid "Learn more about GNOME Games"
+msgstr "Lisätietoja Gnomen peleistä"
+
+#: ../src/ui/application.vala:326
+msgid "translator-credits"
+msgstr "Jiri Grönroos"
+
+#: ../src/ui/application-window.vala:283
+msgid "An unexpected error occurred."
+msgstr "Tapahtui odottamaton virhe."
+
+#: ../src/ui/application-window.vala:524 ../src/ui/application-window.vala:541
+msgid "Playing a game"
+msgstr "Peli meneillään"
+
+#: ../src/ui/error-display.vala:13
+#, c-format
+msgid "Oops! Unable to run “%s”"
+msgstr "Hups! Pelin “%s” käynnistäminen ei onnistu"
+
+#: ../src/ui/error-display.vala:15
+msgid "Oops! Unable to run the game"
+msgstr "Hups! Pelin käynnistäminen ei onnistu"
+
+#. translators: testing a gamepad, %s is its name
+#: ../src/ui/gamepad-configurer.vala:79
+#, c-format
+msgid "Testing %s"
+msgstr "Testataan %s"
+
+#. translators: configuring a gamepad, %s is its name
+#: ../src/ui/gamepad-configurer.vala:93
+#, c-format
+msgid "Configuring %s"
+msgstr "Määritetään %s"
+
+#: ../src/ui/gamepad-mapper.vala:134
+msgid "Press suitable button on your gamepad"
+msgstr ""
+
+#: ../src/ui/gamepad-mapper.vala:139
+msgid "Move suitable axis left/right on your gamepad"
+msgstr ""
+
+#: ../src/ui/gamepad-mapper.vala:141
+msgid "Move suitable axis up/down on your gamepad"
+msgstr ""
+
+#: ../src/ui/media-selector.vala:27
+#, c-format
+msgid "Media %d"
+msgstr ""
+
+#. same as video-filters in gschema
+#: ../src/ui/preferences-page-video.vala:34
+msgid "Smooth"
+msgstr "Sulava"
+
+#: ../src/ui/preferences-page-video.vala:34
+msgid "Sharp"
+msgstr "Terävä"
+
+#: ../src/utils/cue-sheet/cue-sheet.vala:25
+#, c-format
+msgid "“%s” doesn’t have a track for index %u."
+msgstr ""
+
+#: ../src/utils/cue-sheet/cue-sheet.vala:114
+#, c-format
+msgid "%s:%lu: Invalid file format %s, expected a valid file format or none."
+msgstr ""
+
+#: ../src/utils/cue-sheet/cue-sheet.vala:121
+#, c-format
+msgid "%s:%lu: Unexpected token TRACK before a FILE token."
+msgstr ""
+
+#: ../src/utils/cue-sheet/cue-sheet.vala:130
+#, c-format
+msgid "%s:%lu: Invalid track number %s, expected a number in the 1-99 range."
+msgstr ""
+
+#: ../src/utils/cue-sheet/cue-sheet.vala:134
+#, c-format
+msgid "%s:%lu: Invalid track mode %s, expected a valid track mode."
+msgstr ""
+
+#: ../src/utils/cue-sheet/cue-sheet.vala:141
+#, c-format
+msgid "%s:%lu: Unexpected end of file, expected %s."
+msgstr ""
+
+#: ../src/utils/cue-sheet/cue-sheet.vala:144
+#, c-format
+msgid "%s:%lu: Unexpected token %s, expected %s."
+msgstr ""
+
+#: ../src/utils/cue-sheet/cue-sheet.vala:151
+#, c-format
+msgid "%s:%lu: Unexpected end of file, expected a token."
+msgstr ""
+
+#: ../src/utils/cue-sheet/cue-sheet.vala:154
+#, c-format
+msgid "%s:%lu: Unexpected end of line, expected a token."
+msgstr ""
+
+#: ../src/utils/cue-sheet/cue-sheet.vala:177
+#, c-format
+msgid "%s:%lu: Unexpected token %s, expected end of line."
+msgstr ""
+
+#~| msgid "The file doesn't have a Master System header."
+#~ msgid "The file doesn’t have a Master System header."
+#~ msgstr "Tiedostossa ei ole Master System -otsaketta."
+
+#~ msgid ""
+#~ "<b><span size=\"large\">Use the game's own window to play it</span></b>"
+#~ msgstr ""
+#~ "<b><span size=\"large\">Käytä pelin omaa ikkunaa pelataksesi sitä</span></"
+#~ "b>"

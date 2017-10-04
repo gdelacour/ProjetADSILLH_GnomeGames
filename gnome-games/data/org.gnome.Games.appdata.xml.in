@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">org.gnome.Games.desktop</id>
+  <licence>CC0</licence>
+  <project_license>GPL-3.0+</project_license>
+  <_name>Games</_name>
+  <_summary>Simple game launcher for GNOME</_summary>
+
+  <description>
+    <_p>
+      Games is a GNOME 3 application to browse your video games library and to
+      easily pick and play a game from it. It aims to do for games what Music
+      already does for your music library.
+    </_p>
+    <_p>
+      You want to install Games if you just want a very simple and comfortable
+      way to play your games and you don’t need advanced features such as
+      speedrunning tools or video game development tools.
+    </_p>
+    <_p>Features:</_p>
+    <ul>
+      <_li>List your installed games, your Steam games, your game ROMs…</_li>
+      <_li>Search in your games collection</_li>
+      <_li>Play your games</_li>
+      <_li>Resume your game to where you left it</_li>
+    </ul>
+  </description>
+
+  <screenshots>
+    <screenshot type="default">
+      <image width="800" height="450">https://git.gnome.org/browse/gnome-games/plain/data/appdata/games-collection.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="800" height="450">https://git.gnome.org/browse/gnome-games/plain/data/appdata/games-search.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="800" height="450">https://git.gnome.org/browse/gnome-games/plain/data/appdata/retro-ingame.png</image>
+    </screenshot>
+    <screenshot>
+      <image width="800" height="450">https://git.gnome.org/browse/gnome-games/plain/data/appdata/resume-game.png</image>
+    </screenshot>
+  </screenshots>
+
+  <url type="homepage">https://wiki.gnome.org/Apps/Games</url>
+  <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-games</url>
+  <project_group>GNOME</project_group>
+
+  <updatecontact>kekun.plazas_at_laposte.net</updatecontact>
+</application>

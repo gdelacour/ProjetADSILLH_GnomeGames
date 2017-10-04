@@ -1,0 +1,29 @@
+        {
+            "name": "libretro-blastem",
+            "no-autogen": true,
+            "subdir": "libretro",
+            "make-args": [
+                "prefix=/app",
+                "core_installdir=/app/lib/libretro"
+            ],
+            "make-install-args": [
+                "prefix=/app",
+                "core_installdir=/app/lib/libretro"
+            ],
+            "post-install": [
+                /* TODO: Send that upstream */
+                "mkdir -p /app/lib/libretro/",
+                "install -m644 -p blastem.libretro /app/lib/libretro/"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/libretro/blastem-libretro.git"
+                },
+                {
+                    "type": "file",
+                    "path": "blastem.libretro",
+                    "dest-filename": "libretro/blastem.libretro"
+                }
+            ]
+        }

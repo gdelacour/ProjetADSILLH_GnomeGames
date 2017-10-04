@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.16"/>
+  <template class="GamesDisplayBox" parent="GtkEventBox">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="events">GDK_POINTER_MOTION_MASK</property>
+    <signal name="notify::is-fullscreen" handler="on_fullscreen_changed"/>
+    <signal name="motion-notify-event" handler="on_motion_event"/>
+    <child>
+      <object class="GtkOverlay" id="overlay">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child type="overlay">
+          <object class="GtkRevealer" id="fullscreen_header_bar_revealer">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">fill</property>
+            <property name="valign">start</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">False</property>
+            <property name="transition-type">slide-down</property>
+            <property name="events">GDK_POINTER_MOTION_MASK</property>
+            <signal name="notify::is-fullscreen" handler="on_fullscreen_changed"/>
+            <signal name="motion-notify-event" handler="on_motion_event"/>
+            <child>
+              <object class="GamesDisplayHeaderBar" id="fullscreen_header_bar">
+                <property name="visible">True</property>
+                <property name="show_close_button">False</property>
+                <signal name="back" handler="on_fullscreen_header_bar_back"/>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkStack" id="stack">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GamesErrorDisplay" id="error_display">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+              </object>
+              <packing>
+                <property name="name">error</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEventBox" id="display_bin">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+              </object>
+              <packing>
+                <property name="name">display</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

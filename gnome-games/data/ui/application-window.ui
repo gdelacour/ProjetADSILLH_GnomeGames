@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.18.1 -->
+<interface>
+  <requires lib="gtk+" version="3.16"/>
+  <template class="GamesApplicationWindow" parent="GtkApplicationWindow">
+    <property name="can_focus">False</property>
+    <property name="default_width">768</property>
+    <property name="default_height">600</property>
+    <property name="show_menubar">False</property>
+    <signal name="delete-event" after="yes" handler="on_delete_event"/>
+    <signal name="key-press-event" after="yes" handler="on_key_pressed"/>
+    <signal name="window-state-event" after="yes" handler="on_window_state_event"/>
+    <signal name="notify::has-toplevel-focus" after="yes" handler="on_toplevel_focus"/>
+    <child>
+      <object class="GtkStack" id="content_box">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GamesCollectionBox" id="collection_box">
+            <property name="visible">True</property>
+            <signal name="game-activated" handler="on_game_activated"/>
+          </object>
+          <packing>
+            <property name="name">collection</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GamesDisplayBox" id="display_box">
+            <property name="visible">True</property>
+            <signal name="back" handler="on_display_back"/>
+          </object>
+          <packing>
+            <property name="name">display</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child type="titlebar">
+      <object class="GtkStack" id="header_bar">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GamesCollectionHeaderBar" id="collection_header_bar">
+            <property name="visible">True</property>
+            <property name="show_close_button">True</property>
+          </object>
+          <packing>
+            <property name="name">collection</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GamesDisplayHeaderBar" id="display_header_bar">
+            <property name="visible">True</property>
+            <property name="show_close_button">True</property>
+            <signal name="back" handler="on_display_back"/>
+          </object>
+          <packing>
+            <property name="name">display</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

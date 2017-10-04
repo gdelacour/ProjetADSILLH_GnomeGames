@@ -1,0 +1,717 @@
+==============
+Version 3.26.0
+==============
+
+* playstation: Detect games whose executable isn't at the root of the
+  disc.
+
+* Bugs fixed:
+ 787396 playstation: Tekken 3 not detected anymore
+
+* Translation updates:
+ Finnish
+ Hungarian
+
+
+===============
+Version 3.25.92
+===============
+
+* Allow users to use any of their gamepads with integrated games by
+  configuring their gamepads against the de-facto standard one. This is
+  implemented via a wizard in the preferences page.
+
+* Add a dependency on librsvg-2.0.
+
+* Bugs fixed:
+ 780754 Let users setup their gamepads
+
+* Translation updates:
+ Catalan
+ Croatian
+ Czech
+ Finnish
+ French
+ German
+ Indonesian
+ Italian
+ Polish
+ Serbian
+ Spanish
+
+
+==============
+Version 3.25.4
+==============
+
+* The way the games collection is built has been completely reworked to
+  replace the GameSource types generating Game objects from any way of
+  the implementation's choice by the trio of UriSource, UriGameFactory
+  and GameCollection. UriSource generate URIs from any way of the
+  implementation's choice, UriGameFactory generate Game objects from
+  URIs and GameCollection acting as a glue between the two. This new
+  flexibility in the creation of the games collection helped to simplify
+  the way many game types were defined and helped to introduce new game
+  sources to the collection.
+
+* Game URIs can now be passed as command line arguments, allowing your
+  game files to be opened with Games from your file manager. The game
+  will be automatically started by doing so.
+
+* Add a "Add game files" button to the collection view, allowing you to
+  add game files from the collection view to the collection.
+
+* Game resources passed via the command line or the "Add game files"
+  button are stored in a database and restored when starting the
+  application. This allows Games to see your games even if its game
+  resources detection mechanisms failed.
+
+* Introduction of RetroSimpleType to replace many very similar plugins
+  by this simple and easier to maintain generic implementation of the
+  Libretro based game types.
+
+* Supported games:
+ - Add support for Atari Lynx, MS-DOS, WonderSwan and WonderSwan Color
+   games.
+ - Improve the detection of PlayStation discs by parsing them as an
+   emulator would instead of using lucky guessing the location of the
+   required information in the disc.
+ - Don't display desktop games setting the NoDisplay or Hidden keys.
+
+* Gamepad:
+ - Port the gamepad handling system from Vala to C to avoid using Vala's
+   preprocessor as it is poorly handled by the autotools, resulting in
+   broken tarballs.
+ - Make gamepads send events similar to GdkEvent.
+ - Replace the custom input types by the Linux event codes.
+
+* UI:
+ - Use the more appropriate GtkMessageDialog instead of GtkDialog for
+   most of the existing custom dialogs.
+ - Refine the look of MediaSelector, using checkmarks to denote the
+   currently used media.
+ - Use theme relative colors for the games collection.
+ - Drop a useless sorting invalidation in CollectionIconView, which
+   makes the game collection loads a bit faster.
+
+* Improved logging of the Libretro cores by using the Core.log() signal
+  with the retro_g_log() function which have been introduced in
+  retro-gtk recently. This will log messages from the Libretro core with
+  the core's name as the log domain instead of GNOME Games.
+
+* Improve the parameters passed to the grep command to avoid injections.
+
+* Bump retro-gtk to 0.12.
+
+* Bump tracker-sparql to 2.0.
+
+* Bugs fixed:
+ 782952 Using grep in Games do not work with a filename --ignore-case
+ 771631 Use GtkMessageDialog when appropriate
+ 773881 Games takes too long to load the games list
+ 775255 playstation: Add some missing boot offsets
+ 779128 games does not follow global themes
+ 779924 gnome-games crash with SIGSEGV in retro_core_set_callbacks()
+ 780295 Games displays desktop games with NoDisplay=true
+ 780318 gnome-games 3.24.0.1 tarball missing files
+ 780320 Double-clicking on a ROM should launch gnome-games
+ 780714 ui: deprecation warning during cursor creation.
+ 780778 Improve media selector
+ 780920 Plugging more than 2 gamepads orderly will always lead to a segmentation fault.
+ 781036 Licensing cleanup
+ 781334 Untie game resource detection and game object creation
+ 781572 Produced tarballs break the Vala preprocessor
+ 781610 [flatpak] Beetle/Mednafen TurboGrafxCD core cannot find BIOS
+ 781864 utils: Check null values
+ 781886 Assertion 'cookie > 0' failed
+ 782295 GameCollection should completely take care off the collection
+ 782504 retro-gtk: Improve Libretro core logging
+ 782549 Bugs in #781572 porting to C
+ 782611 gamepad: Simplify the gamepad system
+ 782772 retro: Libretro cores should have an appropriate save directory
+ 782824 ui: Allow to add games manually
+ 783067 Games should list Atari Lynx games
+ 783068 Games should list WonderSwan [Color] games
+ 783070 Games should support adding MS-DOS games
+ 783111 plugins: Refactor plugins registering one MIME type per platform
+ 783319 refactor: Expose game IDs and media IDs
+ 783927 Allow more events to be recognized as axes
+ 784334 [flatpak] Incorrect Sega CD firmware checksums in Picodrive description file
+
+* Translation updates:
+ Brazilian Portuguese
+ Croatian
+ Czech
+ Friulian
+ German
+ Hungarian
+ Indonesian
+ Italian
+ Korean
+ Polish
+ Spanish
+ Swedish
+
+
+==============
+Version 3.24.0
+==============
+
+* Make distcheck produce .xz tarballs by default
+
+* Add the Flatpak build manifest for the PicoDrive extension
+
+* Add metadata to the produced screenshots
+
+* Bugs fixed:
+ 769833 Add metadata to screenshots
+ 779987 release tarballs don't have generated files
+
+* Translation updates:
+ French
+ German
+ Hungarian
+ Italian
+ Serbian
+
+
+===============
+Version 3.23.92
+===============
+
+* Add the Flatpak build manifest with the following Libretro cores:
+ - bsnes_balanced
+ - gambatte
+ - mednafen_ngp
+ - mednafen_pce_fast
+ - nestopia
+ - pcsx_rearmed
+
+* Look for Libretro cores recursively into directories
+
+* Fix some typos
+
+* Move the Flatpak manifest to
+ - Move the
+
+* Bugs fixed:
+ 779403 flatpak: Migrate the flatpak-builder manifest from gnome-apps-nightly to gnome-games
+ 779780 Typos in translatable strings
+
+* Translation updates:
+ Brazilian Portuguese
+ Catalan
+ Finnish
+ Friulian
+ Polish
+ Serbian
+ Swedish
+
+
+===============
+Version 3.23.91
+===============
+
+* UI:
+ - Allow to have smooth or sharp video output on retro games
+ - Add more explicative error messages
+ - Remember the size of the application window
+ - Remember the maximized state of the application window
+ - Remember the fullscreen state of the retro games
+ - Prevent a useless empty button to be displayed on the error page
+ - Prevent keyboard shortcuts to set the window fullscreen when not allowed
+ - Fix keyboard navigation in the game collection
+
+* Retro:
+ - Check the presence of mandatory firmwares
+
+* List standalone Libretro games
+
+* Bugs fixed:
+ 777371 Support standalone Libretro games
+ 777987 Allow to have a sharp video output
+ 778236 Offer to auto switch to fullscreen when starting a game
+ 778744 Check required firmwares are present
+ 778773 Explain the user why running a game failed
+ 778774 Empty button visible in the error page
+ 779095 ui: Remember the size, position and state of the window
+
+* Translation updates:
+ Finnish
+ French
+ Italian
+ Polish
+ Serbian
+ Spanish
+
+
+===============
+Version 3.23.90
+===============
+
+* UI:
+ - Show a spinner notification when loading games
+ - Smooth out the collection icons arrangement
+ - Hide menubar when the app menu is disabled
+ - Check there is a media set before updating it
+
+* Retro:
+ - Support Libretro cores having a Libretro Core Descriptor
+ - Auto-detect Libretro cores supporting serialization
+ - Be more tolerant with serialization sizes to follow Libretro rules
+ - Allow Libretro cores to load firmwares in ~/.config/gnome-games
+
+* Add support for FDS games
+
+* Avoid some valid Game Boy games to not be detected
+
+* Bugs fixed:
+ 770783 [nes] Serialization/deserialisation fails
+ 771683 Duplicate menu to set AppMenu to be displayed in the application window
+ 771771 Rename symbolic icon to org.gnome.Games-symbolic.svg
+ 772118 Assertion MediaSet != NULL failed
+ 773882 No way to know when Games looks for games
+ 773950 Smoother dynamic cover placement when resizing the window
+ 777482 retro-gobject: Remove unused private code
+ 777755 retro: Get whether the core supports snapshoting directly from it
+ 777777 Game Boy games not detected
+ 778317 Gnome-games should provide support to Famicom Disk System games
+ 778446 Support the Libretro Core Descriptor format
+ 778447 No well defined place for Libretro cores to look for firmwares
+
+* Translation updates:
+ Brazilian Portuguese
+ Catalan
+ Czech
+ Finnish
+ German
+ Polish
+ Portuguese
+ Slovak
+ Spanish
+
+
+==============
+Version 3.22.0
+==============
+
+* Inhibition:
+ - Inhibit blank screen on idle when playing a game
+ - Inhibit session closing when playing a game
+
+* Prevent the media selector button to show up when it shouldn't
+
+* Look for local covers for Mega-CD and PC-Engine CD-ROM²
+
+* Detect more Mega Drive and PlayStation games
+
+* Bugs fixed:
+ 769968 Screensaver kicks in while playing
+ 771360 mega-drive: Mega-CD games should look for local covers
+ 771361 pc-engine: CD-ROM² games should look for local covers
+ 771511 mega-drive: Some games are not detected
+ 771512 grilo: Critical errors caused by wrong 'return_if_fail'
+ 771513 ui: Media selector sometimes visible on 'Unable to run game' page
+ 771514 playstation: Some discs have their BOOT header at 0xA9F98
+
+* Translation updates:
+ Czech
+ French
+ Hungarian
+ Polish
+
+
+===============
+Version 3.21.92
+===============
+
+* Pause and resume on focus change:
+ - Avoid micro pauses when the shell takes the focus for an instant
+ - Avoid resuming the game when there is a transient dialog
+
+* PlayStation:
+ - Set the correct gamepad type to the games depending on their support
+ - Detect discs with a lowercase disc ID
+ - Get covers from TheGamesDB.net
+ - Ensure discs are in the correct order
+
+* Bugs fixed:
+ 770192 playstation: Some games requires a non-analog gamepad
+ 770426 Moving the "Resume" dialog unpauses the game
+ 770625 The application is named 'gnome-games' and doesn't have its icon in the GCC sound panel
+ 770626 playstation: Games with a lowercase ID not detected
+ 770780 CDs in wrong order
+ 770781 No covers for PSX games
+
+* Translation updates:
+ Finnish
+ French
+ Portuguese
+ Slovenian
+
+
+===============
+Version 3.21.91
+===============
+
+* Improve using Games as a Flatpak
+
+* UI:
+ - Add fullscreen support
+ - Toggle fullscreen with Ctrl+F or F11
+ - Retore the window with Escape
+ - Support covers named similarly to the game file
+ - Support covers allongside the game named as cover.* or folder.*
+ - Pause the game when the window is unfocused
+ - Resume the game when the window is focused
+ - Hide search bar out of collection view
+ - Refactor the resume dialog
+ - Prompt what to do on game resuming failure
+ - Reduce UI freezes when parsing MAME games
+ - Display game loading errors in an error page rather than an info box
+
+* Gamepads:
+ - Can build without gamepad support
+ - Can build without udev (use a gamepad discovery fallback)
+ - Support gamepads without a mapping but sending proper gamepad events
+ - Read mappings from the user's config directory
+ - Fix the value of some mishandled axes
+
+* Add support for:
+ - Game Boy Color
+ - Game Gear
+ - Mega-CD/Sega CD
+ - Mega-CD 32X/Sega CD 32X
+ - Mega Drive 32X/Sega 32X
+ - PC-Engine CD-ROM²
+ - PlayStation
+ - Sega Pico
+ - SG-1000
+
+* PlayStation:
+ - Display the correct title for known games
+ - Support known games with multiple discs
+ - Use the disc's title rather than its number when available
+
+* Bugs fixed:
+ GitHub 94 List PlayStation games
+ GitHub 174 Sometimes steam games installed not in path reported by registry.vdf
+ GitHub 308 Search bar slowly disappear when running game
+ GitHub 309 Ability to add custom gamepad mappings
+ GitHub 311 Should Always reset the Libretro core when starting a game
+ GitHub 312 Refactor the UI code
+ GitHub 313 gamepads: A wrong mapping can make the application crash
+ GitHub 314 Internationalize error messages
+ GitHub 315 Can't run Mega Drive games even with plugin installed
+ GitHub 318 Extract cue sheets handling out of Sega Saturn plugin
+ GitHub 319 Refactor headers file reading
+ GitHub 322 Accessing cue sheet track with an invalid index segfaults
+ GitHub 326 Make it possible to run multi-source games
+ 769318 retro: Support gamepad rumble
+ 769329 ui: Add fullscreen support
+ 769345 playstation: PlayStationHeader doesn't give a correct disc ID
+ 769438 ui: Add a keyboard shortcut to trigger fullscreen
+ 769439 refactor: Move generic type implementations to their own directory
+ 769444 build: Allow to build with $builddir != $srcdir
+ 769468 master-system: Support Game Gear
+ 769472 master-system: Support SG-1000
+ 769473 mega-drive: Support Mega Drive 32X
+ 769474 mega-drive: Support Mega-CD
+ 769475 mega-drive: Support Sega Pico
+ 769496 pc-engine: Suport PC-Engine CD games
+ 769638 769638
+ 769647 build: Rename icons from gnome-games to org.gnome.Games
+ 769676 ui: Look for covers alongside the game files
+ 769678 retro: Support libretro cores distributed with a .info
+ 769801 Tell the user nicely when a ROM isn't supported
+ 769825 grilo: Fix errors when without internet access
+ 769829 Use libsoup instead of gvfs to download the covers
+ 769832 Blocks on startup
+ 769836 gamepads: Support gamepads properly mapped in the kernel
+ 769844 gnome-games: Fix compile time errors
+ 769909 Fix module path checking
+ 769924 Improve the resume dialog
+ 769963 ui: Useless TrackerGameSource in Application.load_game_list()
+ 769904 gamepad: Add fallback support for gamepads without udev
+ 769938 Handle failures when resuming a game
+ 769993 Why a cancellable when quitting the game?
+ 770004 Drop the runners when quitting a game
+ 770011 Pause the runner when the window doesn't have focus
+ 770142 [Alt+Tab]ing back to the application doesn't resume the game.
+ 770468 gamepad: Several annoying bugs
+ 770491 Critical error "Source ID was not found when attempting to remove it"
+ 770492 ui: Cursor hidden after leaving fullscreen
+ 769495 game-boy: Support Game Boy Color
+ 770470 playstation: Some valid games don't have a BOOT header
+ 770471 playstation: Support .bin.ecm games
+
+* Translation updates:
+ Brazilian Portuguese
+ Czech
+ German
+ Hungarian
+ Polish
+ Portuguese
+ Serbian
+ Spanish
+
+
+==============
+Version 3.21.4
+==============
+
+* Allow to use some gamepads on retro games.
+
+* Get covers from:
+ - TheGamesDB.net for most games
+ - the Steam store for Steam Games
+
+* Display covers in the thumbnail for:
+ - Amiga
+ - Atari 2600
+ - Atari 7800
+ - Dreamcast
+ - Game Boy
+ - Game Boy Advance
+ - Game Cube
+ - Master System
+ - Mega Drive
+ - Neo Geo Pocket
+ - NES
+ - Nintendo 64
+ - Nintendo DS
+ - PC-Engine
+ - Sega Saturn
+ - SNES
+ - Steam
+ - Wii
+ - WiiWare
+
+* Double the thumbnail size to better appreaciate covers.
+
+* Bugs fixed:
+ 301 Drawing multiple covers is very slow
+ 302 Display the games' cover
+ 303 Add gamepad support
+ 304 Split result handling from game creation
+
+* Translation updates:
+ Indonesian
+ Slovak
+
+
+==============
+Version 3.21.2
+==============
+
+* Prompt the user when quitting a game that can't be restored
+
+* Add support for:
+ - Atari 2600
+ - Atari 7800
+
+* Add icons for:
+ - LÖVE
+ - Nintendo DS
+
+* Fix the theming to the latest GTK+
+
+* Use filename as the SNES game title source
+
+* Bugs fixed:
+ 109 List Atari 2600 games
+ 160 Some SNES titles are badly rendered
+ 238 SNES games titles are ugly/unusable
+ 259 Warn before quitting a game
+ 263 List Atari 7800 games
+ 275 Refactor MIME type queries
+ 276 Rename *UID classes to *Uid
+ 278 Use URIs in RetroRunne
+ 282 Typo in translatable string
+ 283 Adding simple game types should be trivial
+ 285 Simplify the existing simple game formats
+ 288 Quitting app while running Retro game don't save
+ 289 Refactor icon handling
+ 290 Display LÖVE games' own icons
+ 291 Display Nintendo DS games' own icons
+ 292 Remove custom game types
+ 293 Remove SteamRunner
+ 294 The theme is broken
+
+* Translation updates:
+ Brazilian Portuguese
+ Chinese (China)
+ Czech
+ German
+ Greek
+ Hungarian
+ Italian
+ Polish
+ Serbian
+ Spanish
+ Swedish
+
+
+===============
+Version 3.20.0
+===============
+
+No changes since 3.19.92
+
+
+===============
+Version 3.19.92
+===============
+
+* Add support for:
+ - MAME
+ - Neo-Geo Pocket
+
+* Add the expected Retro module name to its 'not found' error message
+
+* Check whether a Tracker cursor represents a game
+
+* Fix the Amiga MIME-type
+
+* UI:
+ - Enable the error info bar label to wrap
+ - Trigger search in collection view by typing
+
+* Bugs fixed:
+  82 Error messages too wide
+ 103 List Neo Geo Pocket games
+ 113 List arcade games
+ 114 Add search by starting typing
+ 167 Useless error when plugin is missing
+ 250 Remove barely used 'module_path' and 'game_path' attributes
+ 257 Lots of useless warnings in tracker-game-source
+ 260 Can't list amiga games
+ 267 Search prevent games to be played with keyboard
+
+* Translation updates:
+ Spanish
+
+
+===============
+Version 3.19.90
+===============
+
+* Lower logging level of message notifying the lack of a Steam install
+
+* Split RunError into specialized errors
+
+* Steam:
+ - Support registry files containing empty strings
+ - Support game manifests using "appID" instead of "appid"
+
+* Desktop:
+ - Check the validity of DesktopAppInfo before using it
+
+* Tracker:
+ - Check the existence of a file before trying to parse it
+
+* Plugins:
+ - Add a plugin system allowing to extend supported game types
+ - Port code handling the currently supported game types to plugins
+ - Show the available plugins in the 'Preferences' window
+
+* Add an 'About' dialog
+
+* Allow i18n
+
+* Bugs fixed:
+ 162 Is jhbuild.modules still needed?
+ 165 app_info != NULL errors
+ 166 Can't list Steam games warning
+ 169 Steam games not detected due to casing mismatch.
+ 170 Steam registry warns about unexpected token '}'.
+ 178 Lots of Tracker "Couldn't read file" errors
+ 185 Add a plugin system to support more game types
+ 189 RunError is too wide and should be splited
+ 191 Move desktop support into its own plugin
+ 192 Move Steam support into its own plugin
+ 193 Move SNES support into its own plugin
+ 196 Move NES support into its own plugin
+ 199 Move Game Boy support into its own plugin
+ 200 Move Game Boy Advance support into its own plugin
+ 201 Move Nintendo DS support into its own plugin
+ 202 Move Nintendo 64 support into its own plugin
+ 203 Move Game Cube support into its own plugin
+ 204 Move Wii support into its own plugin
+ 205 Move Wii Ware support into its own plugin
+ 206 Move PC-Engine support into its own plugin
+ 207 Move Master System support into its own plugin
+ 208 Move Mega Drive support into its own plugin
+ 209 Move Sega Saturn support into its own plugin
+ 210 Move Dreamcast support into its own plugin
+ 211 Move Amiga support into its own plugin
+ 212 Move DOOM support into its own plugin
+ 213 Move LÖVE support into its own plugin
+ 223 Missing Wii Vala files
+ 224 Missing PC-Engine Vala files
+ 237 The application should be translated
+ 240 Add an About dialog
+ 241 Show the available plugins
+
+* Translation updates:
+ French
+
+
+==============
+Version 3.18.0
+==============
+
+This is the first preview release of Games.
+
+Being that this is such an early release, we'd really appreciate it if you
+took the time to file bugs as you find them or to suggest features.
+
+Features
+--------
+
+* User interface
+ - Offer an icon view of the collection.
+ - Add a way to search for a game by its title.
+ - Sort games in the collection by their title.
+
+* Listed games
+ - Desktop games
+ - Steam games
+ - LÖVE engine games
+ - Doom engine games
+ - NES/Famicom games
+ - SNES/Super Famicom games
+ - Nintendo 64 games
+ - Game Cube games
+ - Wii games
+ - WiiWare games
+ - Game Boy/Game Boy Color games
+ - Game Boy Advance games
+ - Nintendo DS games
+ - Master System games
+ - Mega Drive/Genesis/32X games
+ - Sega Saturn games
+ - Dreamcast games
+ - Game Gear games
+ - PC-Engine games
+
+* Blacklisted games
+ - Blacklist non-games desktop entries, such as gaming console emulators
+   or game engines desktop entries.
+ - Blacklist Steam games desktop entries, so they don't appear twice.
+
+* Runnable games
+ - Desktop games
+ - Steam games
+ - LÖVE engine games
+ - NES/Famicom games (requires retro-plugins-nes)
+ - SNES/Super Famicom games (requires retro-plugins-snes)
+ - Game Boy/Game Boy Color games (requires retro-plugins-game-boy)
+ - PC-Engine games (requires retro-plugins-pce)
+
+* Retro games
+ - Save and load the in-game saves of Retro based games.
+ - Save the state of Retro based games to propose the user to take a its
+  game where he left it off.
+ - Add keyboard support to Retro based games by forwarding the key strokes
+  to the runner.

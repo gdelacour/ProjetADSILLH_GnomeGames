@@ -1,0 +1,32 @@
+[Libretro]
+Type=Emulator
+Version=1.0
+Name=Beetle Saturn
+Module=mednafen_saturn_libretro.so
+LibretroVersion=1
+Authors=Mednafen Team;
+License=GPL-2.0+;
+
+[Platform:SegaSaturn]
+MimeType=application/x-cue;application/x-saturn-rom;
+Firmwares=SegaSaturnEU;SegaSaturnJ;TheKingOfFighters95;UltramanHikariNoKyojinDensetsu;
+
+[Firmware:SegaSaturnEU]
+Path=mpr-17933.bin
+MD5=3240872c70984b6cbfda1586cab68dbe
+Mandatory=true
+
+[Firmware:SegaSaturnJ]
+Path=sega_101.bin
+MD5=85ec9ca47d8f6807718151cbcca8b964
+Mandatory=true
+
+[Firmware:TheKingOfFighters95]
+Path=mpr-18811-mx.ic1
+MD5=255113ba943c92a54facd25a10fd780c
+Mandatory=true
+
+[Firmware:UltramanHikariNoKyojinDensetsu]
+Path=mpr-19367-mx.ic1
+MD5=1cd19988d1d72a3e7caa0b73234c96b4
+Mandatory=true
